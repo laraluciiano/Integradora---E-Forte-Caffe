@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section[id]{
+    scroll-margin-top:70px ;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*ESTILOS EN EL HEADER*/
+.header{
+    background-image: linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)),
+    url(images/bg.jpg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    max-width: 200px;
+    height: auto;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    padding: 20px;
+    color: #FFFDFC;
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu .navbar ul li a:hover{
+    color: #CE967B;
+}
+
+.navbar i {
+    display: none;
+}
+.menu-icono{
+    width: 25px;
+}
+
+.header-content{
+    text-align: center;
+}
+
+.header-content h1{
+    font-size: 75px;
+    line-height: 80px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.header-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+.btn-modal {
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+
+.btn-modal:hover {
+    background-color: #ebad8d;
+}
+
+/*ESTILOS EN LA VENTANA MODAL*/
+#btn-modal-1,
+#btn-modal-2,
+#btn-modal-3,
+#btn-modal-4,
+#btn-modal-5,
+#btn-modal-6 {
+    display: none;
+}
+
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-modal-1:checked~.container-modal,
+#btn-modal-2:checked~.container-modal,
+#btn-modal-3:checked~.container-modal,
+#btn-modal-4:checked~.container-modal,
+#btn-modal-5:checked~.container-modal,
+#btn-modal-6:checked~.container-modal {
+    display: flex;
+}
+
+.content-modal {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #F9FAFC;
+    border-radius: 15px;
+}
+
+.content-modal h2 {
+    margin-bottom: 15px;
+    color: #323337 !important;
+}
+
+.content-modal p {
+    padding: 15px 0px;
+    border-top: 1px solid #E1E2E6;
+    border-bottom: 1px solid #E1E2E6;
+    color: #323337 !important;
+}
+
+.content-modal .btn-cerrar {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: #CE967B;
+    color: #F9FAFC;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: #ebad8d;
+}
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/*ESTILOS EN LA SECCION TIPOS DE CAFES*/
+.coffee{
+    padding: 100px 0;
+    background-color: #E1E2E6;
+    position: relative;
+}
+
+.coffee-content {
+    text-align: center;
+}
+
+.coffee-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #414247;
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.coffee-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.coffee-1{
+    padding: 0 25px;
+}
+
+.coffee-1 img{
+    width: 200px;
+}
+
+.coffee-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.coffee-1 h3{
+    color: #323337;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/*ESTILOS EN SECCION DE SERVICIOS*/
+.services{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/bg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+}
+
+.services-content{
+    text-align: center;
+}
+
+.services-content h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #F9FAFC;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.services-content p{
+    font-size: 16px;
+    color: #c5c5c5;
+    margin-bottom: 50px;
+    padding: 0 100px;
+}
+
+.services-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.services-1{
+    padding: 0 100px;
+}
+
+.services-1 img{
+    width: 25px;
+    margin-bottom: 15px;
+}
+
+.services-1 h3{
+    color: #eaccb3;
+    font-size: 18px;
+}
+
+/*ESTILOS EN LA SECCION GENERAL*/
+.general{
+    display: flex;
+}
+
+.general-1{
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color:#E1E2E6 ;
+}
+
+.general-2{
+    background-image: url(images/coffe-1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.general-3{
+    background-image: url(images/coffee-2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+h2{
+    font-size: 55px;
+    line-height: 70px;
+    color: #323337;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: #414247;
+    margin: 20px 0 45px 0;
+}
+
+/*ESTILOS EN EL CONTACTO*/
+.contact{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-1{
+    padding: 15px 55px;
+}
+
+.contact-1 img{
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.contact-1 h3{
+    font-size: 25px;
+    color: #323337;
+}
+
+.contact-1 h4 {
+    font-size: 12px;
+    color: #323337;
+}
+/*ESTILOS EN EL FOOTER*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #000000;
+    padding: 0 100px;
+}
+
+.footer-logo-container {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.footer-columns {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.footer-columns h4 {
+    color: #E1E2E6;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.footer-columns p {
+    color: #c5c5c5;
+    text-transform: uppercase;
+}
+
+.footer-columns-pay p {
+    color: #c5c5c5;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+}
+
+.link h3{
+    font-size: 18px;
+    color: #F9FAFC;
+    margin-bottom: 15px;
+}
+
+.link a{
+    font-size: 16px;
+    color: #c5c5c5;
+    display: block;
+    margin-bottom: 15px;
+}
+/*ESTILOS RESPONSIVE*/
+@media (max-width:550px) {
+
+    .navbar ul {
+        display: none;
+    }
+
+    .navbar i {
+        display: flex;
+        color: #FFFDFC;
+        font-size: 30px;
+        margin-right: 40px;
+    }
+
+    .header-content h1 {
+        font-size: 55px;
+        line-height: 60px;
+        color: #F9FAFC;
+        margin-bottom: 20px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+
+                .btn-modal {
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+
+    .coffee {
+        padding: 60px 0;
+    }
+
+    .coffee-content h2 {
+        font-size: 38px;
+        line-height: 50px;
+        padding: 0 15px;
+        margin-bottom: 10px;
+    }
+
+    .txt-p {
+        display: none;
+    }
+
+    .coffee-group {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .coffee-1 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .coffee-1 img {
+        max-width: 170px;
+        height: auto;
+    }
+
+    .coffee-1 h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .coffee-1 p {
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 40px;
+    }
+
+    .services-group {
+        flex-direction: column;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .services-1 {
+        margin-bottom: 50px;
+    }
+
+    .services-content h2 {
+        font-size: 31px;
+        line-height: 50px;
+        margin-bottom: 30px;
+    }
+
+    .services-content p {
+        font-size: 14px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .services-1 img {
+        margin-bottom: 10px;
+    }
+
+    .services-1 h3 {
+        font-size: 14px;
+    }
+
+    .general {
+        flex-wrap: wrap;
+    }
+
+    .general-1 {
+        width: 100%;
+        padding: 60px 15px;
+    }
+
+    .general-2,
+    .general-3 {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 20px 0 30px 0;
+    }
+
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+                .content-modal {
+                    width: 90%;
+                }
+}
